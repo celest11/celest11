@@ -1,0 +1,160 @@
+@import "style";
+.sp-box {
+    @media screen and (min-width: 768px) {
+        background: #FFFFFF;
+        @include boxshadow;
+        border-radius: 4px;
+        padding: 2.4rem 2.4rem 1.5rem;
+    }
+}
+
+.sp-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .fund-tab {
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+    }
+}
+
+.select-div {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 550px;
+    width: 100%;
+    .select-dropdown {
+        width: 150px;
+        @media screen and (max-width: 991px) {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 140px;
+        }
+        select.form-control {
+            @media screen and (max-width: 991px) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        justify-content: start;
+    }
+}
+
+.sort-by {
+    p {
+        display: inline-flex;
+        font-weight: 300;
+        padding-right: 0.7rem;
+    }
+    .select-dropdown {
+        width: 124px;
+        &::before {
+            right: 0px;
+        }
+    }
+    select.form-control {
+        border: 0;
+        border-bottom: 1px solid $black-color;
+        border-radius: 0px;
+        font-weight: 600;
+        padding: 0.375rem 0;
+        @media screen and (max-width: 767px) {
+            background: transparent;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.sp-slider>div {
+    &:last-child ul {
+        border-bottom: 0px;
+    }
+}
+
+.manage-sp {
+    .list-heading {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+    ul.sp-list {
+        align-items: center;
+        border-bottom: 1px solid $dark-grey;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media screen and (max-width: 767px) {
+            border-bottom: 0px;
+            background: #FFFFFF;
+            @include boxshadow;
+            border-radius: 4px;
+            padding: 2.4rem 2.4rem 1rem;
+            .border-btn {
+                padding: 0.6rem 2.3rem;
+            }
+        }
+        li {
+            font-size: 1.2rem;
+            padding: 0.8rem 0;
+            width: 50%;
+            @media screen and (min-width: 768px) {
+                padding: 1rem 0;
+                width: 16%;
+            }
+            &:first-child {
+                width: 36%;
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                }
+            }
+            p:nth-child(2) {
+                padding-top: 0.8rem;
+            }
+            @media screen and (min-width: 991px) {
+                &:last-child {
+                    text-align: right;
+                }
+                .border-btn {
+                    border-radius: 1px;
+                    margin: 0px;
+                    padding: 0.9rem 3.7rem;
+                }
+            }
+        }
+    }
+    .list-heading li {
+        font-size: 1.2rem;
+        font-weight: 300;
+        border-top: 0px;
+    }
+    .head-top {
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: initial;
+    }
+}
+
+#stp .sp-list {
+    li {
+        width: 50%;
+        &:first-child {
+            width: 100%;
+        }
+        &:nth-child(2) {
+            width: 100%;
+        }
+        @media screen and (min-width: 768px) {
+            width: 11%;
+            &:first-child {
+                width: 18%;
+            }
+            &:nth-child(2) {
+                width: 18%;
+            }
+        }
+    }
+}

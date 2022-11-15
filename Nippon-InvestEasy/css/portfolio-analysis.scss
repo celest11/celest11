@@ -1,0 +1,77 @@
+@import "style";
+.portfolio-analysis {
+    padding: 1rem 0 3.2rem;
+    .insight-dropdown {
+        background: #FFEFDB;
+        color: $black-color;
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 500;
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        text-align: left;
+        padding: 1.8rem 1.6rem;
+        &.btn-primary:not(:disabled):not(.disabled).active,
+        &.btn-primary:not(:disabled):not(.disabled):active,
+        &.btn-primary:not(:disabled):not(.disabled):active:focus {
+            background-color: #FFEFDB;
+            color: $black-color;
+            border-color: #FFEFDB;
+            box-shadow: none;
+        }
+        i {
+            border: 1px solid $dark-grey;
+            border-radius: 100%;
+            color: $dark-grey;
+            padding: 5px;
+            display: inline-flex;
+            text-align: right;
+            float: right;
+            width: 2.2rem;
+            height: 2.2rem;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.7rem;
+            line-height: 1rem;
+        }
+        &[aria-expanded="false"] i {
+            transform: rotate(-180deg);
+        }
+    }
+    @media (max-width: 767px) {
+        .col-md-8 {
+            margin-top: 2.4rem;
+            .shadowBox {
+                padding-bottom: 0;
+            }
+        }
+        .insights-div {
+            padding: 0px;
+            margin-top: 3rem;
+            .insights {
+                border-radius: 0px;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        .insight-dropdown {
+            display: none;
+        }
+        .collapse.dont-collapse-sm {
+            display: block;
+            height: auto !important;
+            visibility: visible;
+        }
+    }
+}
+
+.insights {
+    background: $pink-bg;
+    border-radius: 8px;
+    padding: 1.6rem;
+    .insight-head {
+        border-bottom: 1px solid $dark-grey;
+        padding-bottom: 0.8rem;
+    }
+}

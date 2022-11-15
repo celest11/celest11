@@ -1,0 +1,75 @@
+@import "style";
+.get-sec {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: 480px) {
+        >img {
+            width: 45%;
+        }
+    }
+}
+
+.or-line {
+    color: #4A4A4A;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1.6rem;
+    &:before {
+        content: '';
+        border-top: 1px solid #E3E3E3;
+        width: 96%;
+        height: 1px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+    }
+}
+
+.fund-listing {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.listing-sec {
+    align-items: center;
+    background: $white-bg;
+    border-radius: 5px;
+    display: inline-flex;
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem 1.6rem 1rem 0.8rem;
+    position: relative;
+    min-width: 170px;
+    @include boxshadow;
+    img {
+        margin-right: 0.8rem;
+    }
+    p {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    @media screen and (min-width: 1200px) {
+        margin: 1rem 1.5rem 1rem 0;
+    }
+}
+
+.i-icon:before {
+    content: '';
+    background: url('../images/i-icon.png') no-repeat;
+    width: 1.7rem;
+    height: 1.7rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+@media screen and (min-width: 991px) {
+    .explore-invest {
+        max-width: 465px;
+    }
+}

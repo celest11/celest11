@@ -1,0 +1,61 @@
+@import "style";
+.right-side {
+    width: 100%;
+}
+
+.profile-div {
+    align-items: center;
+    display: flex;
+    >img {
+        border-radius: 100%;
+        margin-right: 14px;
+    }
+    h3 {
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 8px;
+        img {
+            padding-left: 14px;
+        }
+    }
+}
+
+.nav-tabs {
+    .nav-item {
+        margin-bottom: 0px;
+    }
+    .nav-link:hover {
+        border-color: transparent;
+        color: $black-color;
+    }
+}
+
+.portfolio-tab {
+    background: $white-bg;
+    border: 1px solid #979797;
+    border-radius: 5px;
+    display: inline-flex;
+    margin-top: 0.6rem;
+    margin-bottom: 3.2rem;
+    max-width: 380px;
+    width: 100%;
+    .nav-item {
+        width: 50%;
+    }
+    .nav-link {
+        align-items: center;
+        color: $black-color;
+        display: flex;
+        font-size: 1.5rem;
+        font-weight: 500;
+        height: 4.5rem;
+        justify-content: center;
+        &.active {
+            border-color: transparent;
+            background: $red-color;
+            box-shadow: 5px 5px 10px rgba(213, 213, 213, 0.5);
+            border-radius: 4px;
+            color: $white-color;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+    .get-started {
+        padding-left: 4.3rem;
+    }
+    .family-portfolio .get-started {
+        padding-left: 4.5rem;
+        padding-right: 3rem;
+    }
+    .listing-sec {
+        margin: 1rem 1.5rem 1rem 0;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .family-portfolio .get-started {
+        padding-left: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .left-side-menu {
+        /* width: 200px; */
+    }
+    .right-side {
+        width: calc(100% - 200px);
+        margin-left: auto;
+        padding-left: 90px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .explore-invest {
+        max-width: 465px;
+    }
+    .portfolio-tab .nav-link {
+        width: 19rem;
+    }
+}
+
+@media screen and (min-width: 639px) {
+    .get-started {
+        width: calc(100% - 245px);
+    }
+    .family-portfolio .get-started {
+        width: calc(100% - 280px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .get-sec>img {
+        width: 45%;
+    }
+    .list-div {
+        margin: 2.2rem -1.5rem 3.2rem 0;
+        padding-left: 1.2rem;
+        padding-top: 1rem;
+        overflow: hidden;
+    }
+    .list-div .heading {
+        display: block;
+    }
+    .list-slider .slick-list {
+        margin: 0 -1.2rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .fund-tab .nav-item {
+        margin-right: 2rem;
+    }
+}

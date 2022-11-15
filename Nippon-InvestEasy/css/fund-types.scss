@@ -1,0 +1,55 @@
+@import "style";
+.list-div {
+    background: $white-bg;
+    filter: drop-shadow(0px 0px 20px rgba(221, 221, 221, 0.7));
+    padding: 5rem 0;
+    margin: 2.2rem 0;
+    .heading {
+        display: none;
+        @media screen and (max-width: 480px) {
+            display: block;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        margin: 2.2rem -1.5rem 3.2rem 0;
+        padding-left: 1.2rem;
+        padding-top: 1rem;
+        overflow: hidden;
+    }
+}
+
+.list-slider {
+    .slick-slide {
+        padding: 1.6rem 1.4rem;
+        height: inherit!important;
+    }
+    @media screen and (max-width: 480px) {
+        .slick-list {
+            margin: 0 -1.2rem;
+        }
+    }
+}
+
+.slide-box {
+    background: $white-bg;
+    @include boxshadow;
+    border-radius: 4px;
+    padding: 1.6rem 1.6rem 3.5rem;
+    height: 100%;
+    position: relative;
+    img {
+        margin: 0 auto;
+    }
+    .list-title {
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: initial;
+        margin-top: 0.6rem;
+        margin-bottom: 0.8rem;
+    }
+    p {
+        font-size: 12px;
+        padding-bottom: 0.3rem;
+        line-height: 16px;
+    }
+}
