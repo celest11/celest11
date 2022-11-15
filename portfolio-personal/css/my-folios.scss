@@ -1,0 +1,42 @@
+@import "style";
+.my-folio {
+    .heading {
+        padding-right: 2.1rem;
+    }
+}
+
+.folio-box {
+    .folio-inner {
+        align-items: start;
+        display: flex;
+        justify-content: space-between;
+        &.folio-top {
+            border-bottom: 1px solid #C4C4C4;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.8rem;
+            p {
+                font-weight: 500;
+                font-size: 1.8rem;
+            }
+        }
+        .top-left p {
+            font-weight: 500;
+            font-size: 1.4rem;
+            padding-bottom: 1rem;
+        }
+        .current-amt {
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+        &.folio-bottom {
+            align-items: end;
+        }
+    }
+    .folio-name {
+        background: rgba(224, 48, 40, 0.2);
+        border-radius: 40px;
+        font-weight: 300;
+        font-size: 1.2rem;
+        padding: 4px 12px;
+    }
+}

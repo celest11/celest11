@@ -1,0 +1,882 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+// Variables
+$black-color: #000000;
+$white-color: #fff;
+$blue-color :#333BF0;
+$green-text: #02B17C;
+$red-color: #E03028;
+$orange-bg: #FF6837;
+$grey-bg :#F0F0F0;
+$white-bg: #fff;
+$grey-text: #545454;
+$dark-grey: #4A4A4A;
+$pink-bg: #FFEFDB;
+// mixin
+@mixin boxshadow {
+    box-shadow: 4px 4px 16px #00000026;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%
+}
+
+body {
+    color: $black-color;
+    background: #F4F7F8;
+    font-size: 62.5%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p,
+span {
+    margin: 0;
+    font-size: 1.4rem;
+    line-height: inherit;
+}
+
+a,
+a:focus,
+a:visited {
+    text-decoration: none;
+    outline: none;
+    color: $black-color;
+    font-size: 1.4rem;
+}
+
+a:hover {
+    color: $red-color;
+    text-decoration: none;
+}
+
+button:focus {
+    outline: none;
+}
+
+ul {
+    margin: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+input:focus::-webkit-contacts-auto-fill-button {
+    opacity: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.marginT30 {
+    margin-top: 30px;
+}
+
+.marginT20 {
+    margin-top: 20px;
+}
+
+.paddingTB40 {
+    padding: 4.5rem 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    /* width */
+     ::-webkit-scrollbar {
+        width: 10px;
+    }
+    /* Track */
+     ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    /* Handle */
+     ::-webkit-scrollbar-thumb {
+        background: $red-color;
+        border-radius: 10px;
+        border: 2px solid #f1f1f1;
+    }
+    /* Handle on hover */
+     ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+}
+
+
+/* existing user portfolio family css*/
+
+.container {
+    @media screen and (min-width: 1200px) {
+        max-width: 1170px;
+    }
+    @media (max-width: 1180px) {
+        max-width: 100%;
+    }
+}
+
+.border-btn {
+    background: $white-bg;
+    border: 1px solid $black-color;
+    border-radius: 3px;
+    display: inline-flex;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 1.6rem 0;
+    padding: 1.1rem 2.3rem;
+    color: $black-color;
+    transition: 0.3s;
+    &:hover {
+        background: $red-color;
+        box-shadow: 5px 5px 10px #d5d5d580;
+        color: $white-color;
+        border: 1px solid $red-color;
+    }
+}
+
+.heading {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: initial;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.nav-tabs {
+    .nav-item {
+        margin-bottom: 0px;
+    }
+    .nav-link:hover {
+        border-color: transparent;
+        color: $black-color;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .explore-invest {
+        max-width: 465px;
+    }
+}
+
+.get-sec {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    @media screen and (max-width: 480px) {
+        >img {
+            width: 45%;
+        }
+    }
+}
+
+.or-line {
+    color: #4A4A4A;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 1.6rem;
+    &:before {
+        content: '';
+        border-top: 1px solid #E3E3E3;
+        width: 96%;
+        height: 1px;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+    }
+}
+
+.fund-listing {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.listing-sec {
+    align-items: center;
+    background: $white-bg;
+    border-radius: 5px;
+    display: inline-flex;
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem 1.6rem 1rem 0.8rem;
+    position: relative;
+    min-width: 170px;
+    @include boxshadow;
+    img {
+        margin-right: 0.8rem;
+    }
+    p {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    @media screen and (min-width: 1200px) {
+        margin: 1rem 1.5rem 1rem 0;
+    }
+}
+
+.i-icon:before {
+    content: '';
+    background: url('../images/i-icon.png') no-repeat;
+    width: 1.7rem;
+    height: 1.7rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+}
+
+.list-div {
+    background: $white-bg;
+    filter: drop-shadow(0px 0px 20px rgba(221, 221, 221, 0.7));
+    padding: 5rem 0;
+    margin: 2.2rem 0;
+    .heading {
+        display: none;
+        @media screen and (max-width: 480px) {
+            display: block;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        margin: 2.2rem -1.5rem 3.2rem 0;
+        padding-left: 1.2rem;
+        padding-top: 1rem;
+        overflow: hidden;
+    }
+}
+
+.list-slider {
+    .slick-slide {
+        padding: 1.6rem 1.4rem;
+        height: inherit!important;
+    }
+    @media screen and (max-width: 480px) {
+        .slick-list {
+            margin: 0 -1.2rem;
+        }
+    }
+}
+
+.slide-box {
+    background: $white-bg;
+    @include boxshadow;
+    border-radius: 4px;
+    padding: 1.6rem 1.6rem 3.5rem;
+    height: 100%;
+    position: relative;
+    img {
+        margin: 0 auto;
+    }
+    .list-title {
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: initial;
+        margin-top: 0.6rem;
+        margin-bottom: 0.8rem;
+    }
+    p {
+        font-size: 12px;
+        padding-bottom: 0.3rem;
+        line-height: 16px;
+    }
+}
+
+.slick-track {
+    display: flex;
+}
+
+.explore-btn {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #545454;
+    margin-top: 0.5rem;
+    position: absolute;
+    bottom: 12px;
+}
+
+.grey-bg {
+    background: #F0F0F0;
+    border-radius: 20px;
+    color: $black-color;
+    font-weight: 300;
+    font-size: 1.2rem;
+    display: inline-block;
+    padding: 0.2rem 1.2rem;
+}
+
+.orange-bg {
+    background: $orange-bg;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 0.2rem 0.7rem;
+}
+
+.risk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fund-type {
+    padding: 0.8rem 0 1.6rem;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li {
+            padding: 0.5rem 0;
+        }
+    }
+}
+
+.my-invest {
+    .fund-type li:last-child {
+        width: 20%;
+    }
+}
+
+.fund-head {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.amt {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.green-color {
+    color: $green-text;
+}
+
+.min-sip {
+    border-top: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
+    padding: 1.6rem 0;
+    p {
+        color: #4A4A4A;
+        font-size: 1.2rem;
+    }
+}
+
+a.red-button {
+    background: $red-color;
+    color: $white-color;
+    border: 1px solid $red-color;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.1rem 2.3rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin: 1.6rem 0;
+    &:hover {
+        box-shadow: 0 4px 12px -5px #a3060b;
+        color: $white-color;
+    }
+}
+
+.btn-sec {
+    display: flex;
+    justify-content: space-between;
+    a {
+        width: 48%;
+        padding: 1rem 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .border-btn {
+        border-radius: 0px;
+    }
+    a.red-button {
+        padding: 1.1rem 0;
+    }
+}
+
+.view-btn {
+    border-bottom: 1px solid #4A4A4A;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.2rem;
+    // text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #4A4A4A;
+    margin-top: 0.5rem;
+    padding-bottom: 0px;
+}
+
+.slick-dots {
+    text-align: right;
+    display: inline-block;
+    width: auto;
+    right: 0;
+    li {
+        margin: 0 2px;
+        width: 6px;
+        height: 6px;
+        button {
+            width: 6px;
+            height: 6px;
+            &:before {
+                content: '';
+                background: #B2B2B2;
+                width: 6px;
+                height: 6px;
+                padding: 0;
+                opacity: 1;
+                border-radius: 100%;
+            }
+        }
+        &.slick-active {
+            width: 18px;
+            button:before {
+                opacity: 1;
+                background: #B2B2B2;
+                width: 18px;
+                border-radius: 60px;
+            }
+        }
+    }
+}
+
+.slick-prev,
+.slick-next {
+    bottom: -48px;
+    top: auto;
+    width: 32px;
+    height: 32px;
+    &:before,
+    &:before {
+        background: url('../images/arrow-left.png') no-repeat;
+        width: 32px;
+        height: 32px;
+        color: transparent;
+        display: block;
+    }
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: auto;
+    left: 40px;
+    &:before {
+        background: url('../images/arrow-right.png') no-repeat;
+    }
+}
+
+a.view-all {
+    margin-left: auto;
+    color: $blue-color;
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 13px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    &:hover {
+        color: $red-color;
+        text-decoration: underline;
+    }
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 1.6rem;
+    font-weight: 500;
+    img {
+        width: 25px;
+        margin-right: 0.8rem;
+    }
+}
+
+.fund-tab {
+    border-bottom: 1px solid #E3E3E3;
+    margin-bottom: 1.8rem;
+    li.nav-item {
+        margin-right: 2.4rem;
+        &:nth-last-child(2) {
+            margin-right: 0px;
+        }
+        @media screen and (max-width: 380px) {
+            margin-right: 2rem;
+        }
+    }
+    .nav-link {
+        color: $black-color;
+        font-weight: 300;
+        font-size: 1.4rem;
+        padding: 0.5rem 0;
+        position: relative;
+        &.active {
+            background: transparent;
+            border-color: transparent;
+            /* border-bottom: 3px solid #E03028; */
+            font-weight: 500;
+        }
+        &:after {
+            content: "";
+            background: $red-color;
+            height: 3px;
+            position: absolute;
+            width: 100%;
+            left: 0px;
+            bottom: -3px;
+            transition: all 250ms ease 0s;
+            transform: scale(0);
+        }
+        &.active:after,
+        &:hover:after {
+            transform: scale(1);
+        }
+    }
+}
+
+.top-fund-slider {
+    .slick-list {
+        margin: 0 -1.3rem;
+    }
+    .slick-slide {
+        padding: 1.3rem;
+    }
+}
+
+.fund-card {
+    background: #FFFFFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.top-sec {
+    align-items: start;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.8rem 1.6rem 0.8rem;
+    border-bottom: 1px solid #E3E3E3;
+    position: relative;
+    p {
+        font-weight: 500;
+        width: 174px;
+    }
+}
+
+.invested-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.icon-right {
+    display: inline-flex;
+    img {
+        margin-left: 1.8rem;
+    }
+}
+
+.bottom-sec {
+    padding: 1.6rem 1.6rem 0;
+}
+
+// current value css start
+.value-section ul {
+    align-items: flex-end;
+    border-bottom: 1px solid #C4C4C4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 2.4rem;
+    margin-bottom: 1rem;
+    @media screen and (max-width: 700px) {
+        justify-content: flex-start;
+    }
+    li {
+        @media screen and (max-width: 700px) {
+            width: 33%;
+            padding: 10px 0;
+        }
+        @media screen and (max-width: 600px) {
+            width: 50%;
+            &:first-child {
+                width: 100%;
+            }
+        }
+    }
+    .value-head {
+        color: $black-color;
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        img {
+            vertical-align: top;
+        }
+    }
+    .value-amt {
+        color: $black-color;
+        font-size: 1.8rem;
+        font-weight: 500;
+        &.current-amt {
+            font-size: 2.8rem;
+        }
+        &.invest-amt {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.return-percent {
+    align-items: center;
+    background: rgba(2, 177, 124, 0.15);
+    border-radius: 50px;
+    color: $green-text;
+    display: inline-flex;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: initial;
+    padding: 0.5rem 1rem;
+    margin-left: 0.8rem;
+    img {
+        margin-right: 3px;
+    }
+}
+
+// current value css end
+.select-dropdown {
+    align-items: center;
+    display: inline-flex;
+    position: relative;
+    &::before {
+        content: '';
+        background: url('../images/dropdown-arrow.png') no-repeat;
+        display: block;
+        height: 7px;
+        position: absolute;
+        right: 15px;
+        width: 14px;
+    }
+}
+
+select.form-control {
+    appearance: none;
+    background: #FFFFFF;
+    border: 1px solid $dark-grey;
+    border-radius: 4px;
+    color: $dark-grey;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.investments-head {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .select-dropdown {
+        width: 15%;
+        @media screen and (max-width: 767px) {
+            width: 48%;
+        }
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.view-sec {
+    border-top: 1px solid #E3E3E3;
+    padding-top: 1rem;
+}
+
+.shadowBox {
+    @include boxshadow;
+    background: $white-bg;
+    border-radius: 4px;
+    padding: 1.5rem;
+}
+
+.ideal-box {
+    background: $white-bg;
+    border-radius: 4px;
+    padding: 0.8rem;
+    margin-top: 0.8rem;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            font-size: 1.4rem;
+            width: 50%;
+            padding: 0.7rem 0;
+            .dot {
+                width: 8px;
+                height: 8px;
+                background: rgba(255, 126, 120, 0.8);
+                border-radius: 100%;
+                display: inline-block;
+                margin-right: 4px;
+                &.blue {
+                    background: rgba(74, 237, 217, 0.8);
+                }
+                &.orange {
+                    background: rgba(255, 176, 103, 0.8);
+                }
+                &.yellow {
+                    background: rgba(255, 214, 110, 0.8);
+                }
+            }
+        }
+    }
+}
+
+.more-equity {
+    padding: 1.8rem 0;
+    &.borderBtm {
+        border-bottom: 1px solid #C4C4C4;
+    }
+    p {
+        padding: 0.8rem 0;
+    }
+}
+
+// analysis css end
+// transaction css start
+.slider {
+    .slick-slide {
+        padding: 1.3rem;
+    }
+    .slick-list {
+        margin: 0 -1.3rem;
+    }
+}
+
+.down-arrow {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        margin-right: 1.6rem;
+    }
+    span {
+        color: $black-color;
+        font-weight: 500;
+        font-size: 1.8rem;
+    }
+    p {
+        font-weight: 300;
+        font-size: 1.2rem;
+        padding: 0.4rem 0;
+    }
+}
+
+// transaction css end
+.sec-head {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    @media screen and (max-width: 640px) {
+        .custom-checkbox {
+            order: 1;
+            padding-top: 0;
+            width: 100%;
+        }
+    }
+}
+
+.hide-desktop {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.hide-mobile {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.dot-left {
+    @media screen and (max-width: 767px) {
+        .slick-dots {
+            left: 0;
+            text-align: left;
+        }
+    }
+}
+
+.custom-checkbox {
+    cursor: pointer;
+    padding-top: 1.5rem;
+    .custom-control-label {
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 1.4rem;
+        padding-left: 0.8rem;
+        &::before {
+            border: 2px solid #000000;
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+        &:after {
+            width: 1.6rem;
+            height: 1.6rem;
+            background: no-repeat 70%/70% 70%;
+        }
+    }
+    .custom-control-input:checked~.custom-control-label::before {
+        box-shadow: none;
+        border: 0px;
+        background-color: $red-color;
+        border-color: $red-color;
+    }
+    .custom-control-input:focus~.custom-control-label::before {
+        box-shadow: none;
+        border-color: $black-color;
+    }
+}
+
+
+/* existing user portfolio family css end */
